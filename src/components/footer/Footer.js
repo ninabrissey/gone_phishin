@@ -23,7 +23,7 @@ export default function Footer() {
         {title}
       </p>
       <p className="venue-text" style={{ color: theme.primaryText }}>
-        {formattedDate}
+        {show_date && dayjs(show_date).format('M-D-YYYY')}
       </p>
       <p className="venue-text" style={{ color: theme.primaryText }}>
         {venue_name}
