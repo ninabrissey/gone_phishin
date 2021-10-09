@@ -8,6 +8,6 @@ export const fetchData = async (path) => {
     headers: { Authorization: bearer, Accept: 'application/json' },
   };
 
-  const res = await fetch(`http://phish.in/api/v1/${path}`, optionsObject);
+  const res = await fetch(`https://phish.in/api/v1/${path}`, optionsObject);
   return await res.json();
 };

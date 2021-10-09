@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
 import { ShowContext } from '../../contexts/ShowContext';
 import './YearsDropdown.css';
+import { useHistory } from 'react-router-dom';
 
 const YearsDropdown = () => {
+  const history = useHistory()
   const { years } = useContext(ShowContext);
 
   const yearsOptions = years.map((year) => {
@@ -14,10 +16,9 @@ const YearsDropdown = () => {
   });
 
   const redirect = (year) => {
-    const url = `/years/${year}`;
-    window.location.assign(url);
+    history.push(`/years/${year}`)
   };
-
+  
   return (
     <div>
       <select
