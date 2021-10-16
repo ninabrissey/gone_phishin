@@ -4,7 +4,7 @@ const ThemeContext = createContext();
 
 const ThemeContextProvider = ({ children }) => {
   const [themes, setTheme] = useState({
-    isPartyMode: false,
+    dark: false,
     partyMode: {
       primaryText: '#A81AE5',
       secondaryText: '#2A58F6',
@@ -17,7 +17,7 @@ const ThemeContextProvider = ({ children }) => {
     },
     basic: {
       primaryText: '#6d6f71',
-      mainBG: '#f2f3f5',
+      secondaryText: '#f2f3f5',
       primaryBG: '#D9DBDC',
       secondaryBG: '',
       radius: '10px',
@@ -26,7 +26,7 @@ const ThemeContextProvider = ({ children }) => {
   });
 
   const toggleTheme = () => {
-    setTheme({ ...themes, isPartyMode: !themes.isPartyMode });
+    setTheme({ ...themes, dark: !themes.dark });
   };
 
   return (
