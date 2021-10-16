@@ -9,7 +9,6 @@ import './Navbar.css';
 
 const Navbar = () => {
   const { isPartyMode } = useTheme();
-  console.log(isPartyMode);
   return (
     <div className="navbar">
       <div className="mode">

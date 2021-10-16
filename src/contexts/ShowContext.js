@@ -21,7 +21,6 @@ const ShowContextProvider = ({ children }) => {
     try {
       const track = await fetchData(`tracks/${id}`);
       setCurrentTrack(track.data);
-      console.log(track.data);
     } catch (error) {
       setError(error.message);
     }
