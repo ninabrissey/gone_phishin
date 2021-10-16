@@ -1,9 +1,9 @@
-beforeEach(() => {
-  cy.visit('http://localhost:3000/');
-  cy.fetchYears('http://phish.in/api/v1/years');
-});
-
 describe('Landing Page (Years View)', () => {
+  beforeEach(() => {
+    cy.visit('http://localhost:3000/');
+    cy.fetchYears('http://phish.in/api/v1/years');
+  });
+
   it('should be able to get all elements on the page', () => {
     cy.get('img')
       .should('have.attr', 'src')
