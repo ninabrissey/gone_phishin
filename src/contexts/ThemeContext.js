@@ -8,7 +8,7 @@ const ThemeContextProvider = ({ children }) => {
     partyMode: {
       primaryText: '#A81AE5',
       secondaryText: '#2A58F6',
-      primaryBG: 'rgb(243 145 39 / 79%)',
+      primaryBG: 'black',
       secondaryBG: '#31E5F8',
       aquaGradient:
         'linear-gradient(90deg, rgba(49,229,248,1) 35%, rgba(42,88,246,1) 100%)',

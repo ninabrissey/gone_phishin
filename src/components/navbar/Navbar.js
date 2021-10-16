@@ -8,10 +8,16 @@ import phishInPartyLogo from '../../phish-in-party-multicolor-logo.png';
 import './Navbar.css';
 
 const Navbar = () => {
-  const { dark } = useTheme();
-  console.log(dark);
+  const { dark, partyMode, basic } = useTheme();
+  const theme = dark ? partyMode : basic;
+
   return (
-    <div className="navbar">
+    <div
+      className="navbar"
+      style={{
+        background: theme.primaryBG,
+      }}
+    >
       <div className="mode">
         <ThemeToggle />
       </div>

@@ -9,7 +9,6 @@ import dayjs from 'dayjs';
 export default function Footer() {
   const { currentTrack } = useContext(ShowContext);
   const { mp3, title, show_date, venue_name, venue_location } = currentTrack;
-  const formattedDate = dayjs(show_date).format('M-D-YYYY');
 
   const { dark, partyMode, basic } = useTheme();
   const theme = dark ? partyMode : basic;
@@ -23,7 +22,7 @@ export default function Footer() {
         {title}
       </p>
       <p className="venue-text" style={{ color: theme.primaryText }}>
-        {formattedDate}
+        {show_date && dayjs(show_date).format('M-D-YYYY')}
       </p>
       <p className="venue-text" style={{ color: theme.primaryText }}>
         {venue_name}

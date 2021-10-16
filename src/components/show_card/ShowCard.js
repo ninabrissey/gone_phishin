@@ -9,12 +9,7 @@ const ShowCard = ({ show }) => {
   const { date, venue_name, venue, id } = show;
   return (
     <Link to={`/shows/${id}`} className="show-card-link">
-      <article
-        style={{
-          background: theme.primaryBG,
-        }}
-        className="card"
-      >
+      <article className="card">
         <p className="date" style={{ color: theme.primaryText }}>
           {' '}
           {dayjs(date).format('MMM D, YYYY')}{' '}

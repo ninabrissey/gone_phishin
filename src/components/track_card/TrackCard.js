@@ -11,18 +11,7 @@ const TrackCard = ({ track }) => {
   const { id, title } = track;
 
   return (
-    <article
-      className="card"
-      id={id}
-      style={
-        {
-          // background: theme.primaryBG,
-          // boxShadow: theme.shadow,
-          // borderRadius: theme.radius,
-        }
-      }
-      onClick={() => getCurrentTrack(id)}
-    >
+    <article className="card" id={id} onClick={() => getCurrentTrack(id)}>
       <p className="song-title" style={{ color: theme.primaryText }}>
         {title}
       </p>

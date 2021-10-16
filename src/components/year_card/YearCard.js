@@ -7,13 +7,7 @@ const YearCard = ({ year }) => {
   const theme = dark ? partyMode : basic;
 
   return (
-    <div
-      style={{
-        background: theme.primaryBG,
-      }}
-      className="card"
-      id={year}
-    >
+    <div className="card" id={year}>
       <h3 style={{ color: theme.primaryText }} className="year-text">
         {year}
       </h3>
