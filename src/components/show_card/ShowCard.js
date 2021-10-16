@@ -4,16 +4,14 @@ import { useTheme } from '../../contexts/ThemeContext';
 import dayjs from 'dayjs';
 
 const ShowCard = ({ show }) => {
-  const { isPartyMode, partyMode, basic } = useTheme();
-  const theme = isPartyMode ? partyMode : basic;
+  const { dark, partyMode, basic } = useTheme();
+  const theme = dark ? partyMode : basic;
   const { date, venue_name, venue, id } = show;
   return (
     <Link to={`/shows/${id}`} className="show-card-link">
       <article
         style={{
           background: theme.primaryBG,
-          boxShadow: theme.shadow,
-          borderRadius: theme.radius,
         }}
         className="card"
       >
