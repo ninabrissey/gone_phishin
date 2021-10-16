@@ -62,7 +62,7 @@ Cypress.Commands.add('fetch2019Shows', () => {
     body: {
       data: [
         {
-          date: 'DATE TEST 1',
+          date: '2019/02/28',
           duration: 9658254,
           id: 1,
           incomplete: false,
@@ -85,7 +85,7 @@ Cypress.Commands.add('fetch2019Shows', () => {
           venue_name: 'TEST NAME 1',
         },
         {
-          date: 'DATE TEST 2',
+          date: '2019/02/21',
           duration: 9658254,
           id: 2,
           incomplete: false,
@@ -118,7 +118,7 @@ Cypress.Commands.add('fetch2020Shows', () => {
     body: {
       data: [
         {
-          date: 'DATE TEST 1 FOR 2020',
+          date: '2020/03/15',
           duration: 9658254,
           id: 3,
           incomplete: false,
@@ -141,7 +141,7 @@ Cypress.Commands.add('fetch2020Shows', () => {
           venue_name: 'TEST NAME 1 FOR 2020',
         },
         {
-          date: 'DATE TEST 2 FOR 2020',
+          date: '2020/03/16',
           duration: 9658254,
           id: 4,
           incomplete: false,
@@ -173,7 +173,7 @@ Cypress.Commands.add('fetchShowData', () => {
     statusCode: 200,
     body: {
       data: {
-        date: 'TEST SHOW DATE',
+        date: '2019/02/21',
         duration: 9658254,
         id: 2,
         incomplete: false,
