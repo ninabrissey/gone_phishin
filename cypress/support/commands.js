@@ -141,7 +141,7 @@ Cypress.Commands.add('fetch2020Shows', () => {
           venue_name: 'TEST NAME 1 FOR 2020',
         },
         {
-          date: 'DATE TEST 2 FOR 2020',
+          date: '2020/03/16',
           duration: 9658254,
           id: 4,
           incomplete: false,
