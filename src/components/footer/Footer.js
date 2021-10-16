@@ -11,11 +11,11 @@ export default function Footer() {
   const { mp3, title, show_date, venue_name, venue_location } = currentTrack;
   const formattedDate = dayjs(show_date).format('M-D-YYYY');
 
-  const { isPartyMode, partyMode, basic } = useTheme();
-  const theme = isPartyMode ? partyMode : basic;
+  const { dark, partyMode, basic } = useTheme();
+  const theme = dark ? partyMode : basic;
 
   return (
-    <footer className="footer" style={{ background: theme.aquaGradient }}>
+    <footer className="footer" style={{ background: theme.primaryBG }}>
       <p
         className="venue-text venue-title"
         style={{ color: theme.primaryText }}
