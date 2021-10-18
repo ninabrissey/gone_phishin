@@ -11,10 +11,3 @@
 .year-link {
   text-decoration: none;
 }
-
-.year-link :hover {
-  background-color: brown;
-  color: #d9dbdc;
-  text-decoration: none;
-  cursor: pointer;
-}
