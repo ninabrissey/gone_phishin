@@ -60,7 +60,7 @@ const TracksContainer = ({ id }) => {
           <h4 style={{ color: theme.primaryText }}>-- SET II --</h4>
           <div className="set-2">{filterBySet('Set 2')}</div>
           {/* need to conditionally render set 3 */}
-          {filterBySet('Set 3') !== 'undefined' && (
+          {filterBySet('Set 3').length > 0 && (
             <div className="set-3">
               <h4 style={{ color: theme.primaryText }}>-- SET III --</h4>
               <div className="set-3">{filterBySet('Set 3')}</div>
