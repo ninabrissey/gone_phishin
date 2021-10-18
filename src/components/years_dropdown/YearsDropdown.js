@@ -1,9 +1,12 @@
 import React, { useContext } from 'react';
 import { ShowContext } from '../../contexts/ShowContext';
+import { useTheme } from '../../contexts/ThemeContext';
 import './YearsDropdown.css';
 
 const YearsDropdown = () => {
   const { years } = useContext(ShowContext);
+  const { dark, partyMode, basic } = useTheme();
+  const theme = dark ? partyMode : basic;
 
   const yearsOptions = years.map((year) => {
     return (
@@ -21,6 +24,7 @@ const YearsDropdown = () => {
   return (
     <div>
       <select
+        style={{ color: theme.primaryText }}
         className="select"
         name="years"
         id="yearsSelect"
