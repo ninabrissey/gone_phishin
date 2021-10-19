@@ -1,9 +1,3 @@
-.track-card {
-  border-bottom: 2px solid #595959;
-  display: flex;
-  flex: flex-wrap;
-}
-
 .song-title {
   margin: 20px;
   text-align: center;

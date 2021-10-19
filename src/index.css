@@ -3,7 +3,6 @@ body {
   font-family: 'Open Sans Condensed', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-color: #f2f3f5; */
   width: 100vw;
 }
 
@@ -12,13 +11,14 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   height: 100vh;
   width: 100vw;
 }
 
 .phish-logo-loading {
-  margin: 20%;
+  margin: 50%;
+  margin-left: 70%;
+  margin-top: 30%;
   height: 5rem;
   width: fit-content;
   pointer-events: none;
@@ -27,11 +27,8 @@ body {
 }
 
 .card {
-  width: 60vw;
-  padding: 1%;
-  margin-bottom: 7%;
-  background-color: #d9dbdc;
-  border-radius: 5px;
+  width: 100vw;
+  border-bottom: 2px solid #595959;
 }
 
 @keyframes logo-spin {

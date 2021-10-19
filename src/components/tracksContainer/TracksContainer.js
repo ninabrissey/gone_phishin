@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext, useCallback } from 'react';
 import { ShowContext } from '../../contexts/ShowContext';
+import { useTheme } from '../../contexts/ThemeContext';
 import TrackCard from '../track_card/TrackCard';
 import ErrorDisplay from '../error_display/ErrorDisplay';
 import dayjs from 'dayjs';
@@ -7,6 +8,8 @@ import './TracksContainer.css';
 
 const TracksContainer = ({ id }) => {
   const { fetchData } = useContext(ShowContext);
+  const { mode, party, basic } = useTheme();
+  const theme = mode ? party : basic;
   const [tracks, setTracks] = useState([]);
   const [show, setShow] = useState({});
   const [error, setError] = useState('');
@@ -35,10 +38,15 @@ const TracksContainer = ({ id }) => {
   };
 
   return (
-    <section className="tracks-container">
+    <section
+      className="tracks-container"
+      style={{
+        background: theme.primaryBG,
+      }}
+    >
       {error && <ErrorDisplay message={error} />}
       {show.date && show.venue_name && show.venue.location && (
-        <div className="show-info">
+        <div className="show-info" style={{ color: theme.primaryText }}>
           <h3>{dayjs(show.date).format('MMM D, YYYY')}</h3>
           <h3>{show.venue_name}</h3>
           <h3>{show.venue.location}</h3>
@@ -47,18 +55,18 @@ const TracksContainer = ({ id }) => {
 
       {tracks.length > 0 && (
         <div className="tracks-container">
-          <h4>-- SET I --</h4>
+          <h4 style={{ color: theme.primaryText }}>-- SET I --</h4>
           <div className="set-1">{filterBySet('Set 1')}</div>
-          <h4>-- SET II --</h4>
+          <h4 style={{ color: theme.primaryText }}>-- SET II --</h4>
           <div className="set-2">{filterBySet('Set 2')}</div>
           {/* need to conditionally render set 3 */}
-          {filterBySet('Set 3') !== 'undefined' && (
+          {filterBySet('Set 3').length > 0 && (
             <div className="set-3">
-              <h4>-- SET III --</h4>
+              <h4 style={{ color: theme.primaryText }}>-- SET III --</h4>
               <div className="set-3">{filterBySet('Set 3')}</div>
             </div>
           )}
-          <h4>-- ENCORE --</h4>
+          <h4 style={{ color: theme.primaryText }}>-- ENCORE --</h4>
           <div className="encore">{filterBySet('Encore')}</div>
         </div>
       )}

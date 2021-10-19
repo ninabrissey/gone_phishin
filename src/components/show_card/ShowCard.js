@@ -4,19 +4,12 @@ import { useTheme } from '../../contexts/ThemeContext';
 import dayjs from 'dayjs';
 
 const ShowCard = ({ show }) => {
-  const { isPartyMode, partyMode, basic } = useTheme();
-  const theme = isPartyMode ? partyMode : basic;
+  const { mode, party, basic } = useTheme();
+  const theme = mode ? party : basic;
   const { date, venue_name, venue, id } = show;
   return (
     <Link to={`/shows/${id}`} className="show-card-link">
-      <article
-        style={{
-          background: theme.primaryBG,
-          boxShadow: theme.shadow,
-          borderRadius: theme.radius,
-        }}
-        className="card"
-      >
+      <article className="card">
         <p className="date" style={{ color: theme.primaryText }}>
           {' '}
           {dayjs(date).format('MMM D, YYYY')}{' '}

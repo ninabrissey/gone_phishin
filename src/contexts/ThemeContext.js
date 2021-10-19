@@ -4,20 +4,17 @@ const ThemeContext = createContext();
 
 const ThemeContextProvider = ({ children }) => {
   const [themes, setTheme] = useState({
-    isPartyMode: false,
-    partyMode: {
+    mode: false,
+    party: {
       primaryText: '#A81AE5',
       secondaryText: '#2A58F6',
-      primaryBG: 'rgb(243 145 39 / 79%)',
+      primaryBG:
+        'linear-gradient(90deg, rgba(62,62,62,1) 0%, rgba(0,0,0,1) 50%, rgba(62,62,62,1) 100%)',
       secondaryBG: '#31E5F8',
-      aquaGradient:
-        'linear-gradient(90deg, rgba(49,229,248,1) 35%, rgba(42,88,246,1) 100%)',
-      radius: '10%',
-      shadow: '5px 5px 15px rgb(173 39 242)',
     },
     basic: {
       primaryText: '#6d6f71',
-      mainBG: '#f2f3f5',
+      secondaryText: '#f2f3f5',
       primaryBG: '#D9DBDC',
       secondaryBG: '',
       radius: '10px',
@@ -26,7 +23,7 @@ const ThemeContextProvider = ({ children }) => {
   });
 
   const toggleTheme = () => {
-    setTheme({ ...themes, isPartyMode: !themes.isPartyMode });
+    setTheme({ ...themes, mode: !themes.mode });
   };
 
   return (

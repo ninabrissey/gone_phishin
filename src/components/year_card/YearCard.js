@@ -3,19 +3,11 @@ import { useTheme } from '../../contexts/ThemeContext';
 import './YearCard.css';
 
 const YearCard = ({ year }) => {
-  const { isPartyMode, partyMode, basic } = useTheme();
-  const theme = isPartyMode ? partyMode : basic;
+  const { mode, party, basic } = useTheme();
+  const theme = mode ? party : basic;
 
   return (
-    <div
-      style={{
-        background: theme.primaryBG,
-        boxShadow: theme.shadow,
-        borderRadius: theme.radius,
-      }}
-      className="card"
-      id={year}
-    >
+    <div className="card" id={year}>
       <h3 style={{ color: theme.primaryText }} className="year-text">
         {year}
       </h3>
