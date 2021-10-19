@@ -41,7 +41,7 @@
   - We chose to use `React's Context API` to manage our application state. which allowed us to pass data through the component tree without having to pass props down manually at every level.
   - As the application grows, context will help our application stay organized and easy to read and manage as we start to use and manipulate shared state values from multiple components.
   - Currently our application takes advantage of a party mode context called `ThemeContext` which allows multiple components to listen for state changes as party mode is toggled on and off, changing component styling.
-  - Take a look at any page display and choose the toggle theme button to see how state (theme, dark) is shared between components.
+  - Take a look at any page display and choose the toggle theme button to see how state (theme, mode) is shared between components.
   - We also have a context that holds show data that is shared amongst our components, including our all shows and all tracks data. Note: In the future as more functionality is added, more components will need access to this state.
 - We also used `React Hooks` in our application which allowed us to use state without relying on a class component. We were able to 'hook into' React state and lifecycle features and work with advanced hooks like `useContext`.
 - We are currently collaborating with Phish.in and hoping to merge our mobile version of the application so that Phish fans have a mobile friendly of the desktop application.
@@ -58,8 +58,7 @@
   - Favorite Phish Song:
 - [Stephanie Magdic (Author)](https://github.com/stephaniemagdic)
 
-
-    - Favorite Phish Song: 'She would have chose a Led Zeppelin API. 🤪 '
+  - Favorite Phish Song: 'She would have chose a Led Zeppelin API. 🤪 '
 
 ## Future Features
 

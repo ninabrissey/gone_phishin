@@ -10,8 +10,8 @@ export default function Footer() {
   const { currentTrack } = useContext(ShowContext);
   const { mp3, title, show_date, venue_name, venue_location } = currentTrack;
 
-  const { dark, partyMode, basic } = useTheme();
-  const theme = dark ? partyMode : basic;
+  const { mode, party, basic } = useTheme();
+  const theme = mode ? party : basic;
 
   return (
     <footer className="footer" style={{ background: theme.primaryBG }}>

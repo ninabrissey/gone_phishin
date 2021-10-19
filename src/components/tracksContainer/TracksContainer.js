@@ -8,8 +8,8 @@ import './TracksContainer.css';
 
 const TracksContainer = ({ id }) => {
   const { fetchData } = useContext(ShowContext);
-  const { dark, partyMode, basic } = useTheme();
-  const theme = dark ? partyMode : basic;
+  const { mode, party, basic } = useTheme();
+  const theme = mode ? party : basic;
   const [tracks, setTracks] = useState([]);
   const [show, setShow] = useState({});
   const [error, setError] = useState('');

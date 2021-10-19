@@ -5,8 +5,8 @@ import './YearsDropdown.css';
 
 const YearsDropdown = () => {
   const { years } = useContext(ShowContext);
-  const { dark, partyMode, basic } = useTheme();
-  const theme = dark ? partyMode : basic;
+  const { mode, party, basic } = useTheme();
+  const theme = mode ? party : basic;
 
   const yearsOptions = years.map((year) => {
     return (

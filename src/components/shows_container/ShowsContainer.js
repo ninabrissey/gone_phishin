@@ -9,8 +9,8 @@ import './ShowsContainer.css';
 const ShowsContainer = ({ year }) => {
   const { shows, getShows, error } = useContext(ShowContext);
   const [isLoading, setIsLoading] = useState(true);
-  const { dark, partyMode, basic } = useTheme();
-  const theme = dark ? partyMode : basic;
+  const { mode, party, basic } = useTheme();
+  const theme = mode ? party : basic;
 
   const memo = useCallback(() => {
     const fetchShows = async () => {

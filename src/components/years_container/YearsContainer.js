@@ -8,8 +8,8 @@ import './YearsContainer.css';
 
 const YearsContainer = () => {
   const { years, error } = useContext(ShowContext);
-  const { dark, partyMode, basic } = useTheme();
-  const theme = dark ? partyMode : basic;
+  const { mode, party, basic } = useTheme();
+  const theme = mode ? party : basic;
 
   const cards = years.map((year) => {
     return (

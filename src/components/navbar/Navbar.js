@@ -8,8 +8,8 @@ import phishInPartyLogo from '../../phish-in-party-multicolor-logo.png';
 import './Navbar.css';
 
 const Navbar = () => {
-  const { dark, partyMode, basic } = useTheme();
-  const theme = dark ? partyMode : basic;
+  const { mode, party, basic } = useTheme();
+  const theme = mode ? party : basic;
 
   return (
     <div
@@ -25,7 +25,7 @@ const Navbar = () => {
         <img
           className="phish-in-logo"
           alt="phish-in-logo"
-          src={dark ? phishInPartyLogo : phishInLogo}
+          src={mode ? phishInPartyLogo : phishInLogo}
         ></img>
       </Link>
       <YearsDropdown />

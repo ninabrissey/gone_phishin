@@ -6,8 +6,8 @@ import './TrackCard.css';
 
 const TrackCard = ({ track }) => {
   const { getCurrentTrack } = useContext(ShowContext);
-  const { dark, partyMode, basic } = useTheme();
-  const theme = dark ? partyMode : basic;
+  const { mode, party, basic } = useTheme();
+  const theme = mode ? party : basic;
   const { id, title } = track;
 
   return (

@@ -5,8 +5,8 @@ import underConstructionParty from '../../error_party.png';
 import { useTheme } from '../../contexts/ThemeContext';
 
 const ErrorDisplay = ({ message }) => {
-  const { dark } = useTheme();
-  const errorImage = dark ? underConstructionParty : underConstruction;
+  const { mode } = useTheme();
+  const errorImage = mode ? underConstructionParty : underConstruction;
 
   return (
     <div className="error-display">

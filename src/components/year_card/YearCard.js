@@ -3,8 +3,8 @@ import { useTheme } from '../../contexts/ThemeContext';
 import './YearCard.css';
 
 const YearCard = ({ year }) => {
-  const { dark, partyMode, basic } = useTheme();
-  const theme = dark ? partyMode : basic;
+  const { mode, party, basic } = useTheme();
+  const theme = mode ? party : basic;
 
   return (
     <div className="card" id={year}>
