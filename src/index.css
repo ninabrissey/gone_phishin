@@ -17,8 +17,6 @@ body {
 
 .phish-logo-loading {
   margin: 50%;
-  margin-left: 70%;
-  margin-top: 30%;
   height: 5rem;
   width: fit-content;
   pointer-events: none;
