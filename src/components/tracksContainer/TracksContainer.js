@@ -3,6 +3,7 @@ import { ShowContext } from '../../contexts/ShowContext';
 import { useTheme } from '../../contexts/ThemeContext';
 import TrackCard from '../track_card/TrackCard';
 import ErrorDisplay from '../error_display/ErrorDisplay';
+import phishLogoLoading from '../../phishLogoLoading.png';
 import dayjs from 'dayjs';
 import './TracksContainer.css';
 
@@ -13,6 +14,7 @@ const TracksContainer = ({ id }) => {
   const [tracks, setTracks] = useState([]);
   const [show, setShow] = useState({});
   const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
 
   const memo = useCallback(() => {
     const getShow = async (id) => {
@@ -20,6 +22,7 @@ const TracksContainer = ({ id }) => {
         const show = await fetchData(`shows/${id}`);
         setTracks(show.data.tracks);
         setShow(show.data);
+        setIsLoading(false);
       } catch (error) {
         setError(error.message);
       }
@@ -44,6 +47,13 @@ const TracksContainer = ({ id }) => {
         background: theme.primaryBG,
       }}
     >
+      {isLoading && !error && (
+        <img
+          className="phish-logo-loading"
+          alt="phish-logo-loading"
+          src={phishLogoLoading}
+        ></img>
+      )}
       {error && <ErrorDisplay message={error} />}
       {show.date && show.venue_name && show.venue.location && (
         <div className="show-info" style={{ color: theme.primaryText }}>
