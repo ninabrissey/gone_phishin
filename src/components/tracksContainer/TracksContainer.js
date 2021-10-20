@@ -48,11 +48,13 @@ const TracksContainer = ({ id }) => {
       }}
     >
       {isLoading && !error && (
-        <img
-          className="phish-logo-loading"
-          alt="phish-logo-loading"
-          src={phishLogoLoading}
-        ></img>
+        <div className="loading-image-container">
+          <img
+            className="phish-logo-loading"
+            alt="phish-logo-loading"
+            src={phishLogoLoading}
+          ></img>
+        </div>
       )}
       {error && <ErrorDisplay message={error} />}
       {show.date && show.venue_name && show.venue.location && (
