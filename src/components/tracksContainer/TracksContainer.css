@@ -1,6 +1,5 @@
 .tracks-container {
   display: flex;
-  height: 100%;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -9,4 +8,10 @@
   word-break: keep-all;
   margin-bottom: 14vh;
   text-align: center;
+}
+
+.loading-image-container {
+  margin-top: 15vh;
+  margin-bottom: 15vh;
+  height: 70vh;
 }
