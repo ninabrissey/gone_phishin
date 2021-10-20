@@ -6,7 +6,7 @@ const ThemeContextProvider = ({ children }) => {
   const [themes, setTheme] = useState({
     mode: false,
     party: {
-      primaryText: '#A81AE5',
+      primaryText: '#A925E6',
       secondaryText: '#2A58F6',
       primaryBG:
         'linear-gradient(90deg, rgba(62,62,62,1) 0%, rgba(0,0,0,1) 50%, rgba(62,62,62,1) 100%)',
