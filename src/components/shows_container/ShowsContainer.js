@@ -37,11 +37,13 @@ const ShowsContainer = ({ year }) => {
     >
       {error && <ErrorDisplay message={error} />}
       {isLoading && !error && (
-        <img
-          className="phish-logo-loading"
-          alt="phish-logo-loading"
-          src={phishLogoLoading}
-        ></img>
+        <div className="loading-image-container">
+          <img
+            className="phish-logo-loading"
+            alt="phish-logo-loading"
+            src={phishLogoLoading}
+          ></img>
+        </div>
       )}
       {!isLoading && !error && showCardComponents}
     </div>
